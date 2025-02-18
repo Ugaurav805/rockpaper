@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="rockpaper.css" />
+  </head>
+  <body>
+    <div class="container" id="scoreContainer">
+      <div>
+        <ul class="list">
+          <li>ROCK</li>
+          <li>PAPER</li>
+          <li>SCISSORS</li>
+        </ul>
+      </div>
+      <div class="score">
+        <div class="computerScore">
+          <h2>COMPUTER SCORE</h2>
+          <p class="c-count count">0</p>
+        </div>
+        <div class="YourScore">
+          <h2>YOUR SCORE</h2>
+          <p class="p-count count">0</p>
+        </div>
+      </div>
+    </div>
+    <section class="game" id="gameSection">
+      <div class="button-container" id="buttonContainer">
+        <button class="custom-button" id="rock" aria-label="Choose Rock">
+          <img
+            src="img/7d8f1b87d406a7bced07190e2c368075.png"
+            alt="rock"
+            height="64"
+            width="64"
+          />
+        </button>
+        <button class="custom-button" id="paper" aria-label="Choose Paper">
+          <img
+            src="img/879bf162796082bc4c606349436e0c52.png"
+            alt="paper"
+            height="64"
+            width="64"
+          />
+        </button>
+        <button class="custom-button" id="scissor" aria-label="Choose Scissors">
+          <img
+            src="img/8e9ba336eea3ea7f107fc48755a6b68d.png"
+            alt="scissor"
+            height="64"
+            width="64"
+          />
+        </button>
+      </div>
+      <div class="result" aria-live="polite"></div>
+      <div class="chosen-images"></div>
+      <button class="reload" aria-label="Play Again">Play Again</button>
+      <button class="new-game" aria-label="New Game">New Game</button>
+    </section>
+    <button id="rulesButton">RULES</button>
+    <button id="nextButton" onclick="location.href='next.html'">NEXT</button>
+    <div id="rulesPopup" class="popup">
+      <div class="popup-content">
+        <span class="close-button" id="closeButton">&times;</span>
+        <h1 class="Rule">Game Rules</h1>
+        <ul class="insidebox">
+          <li>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <br />
+          <li>
+            Agree ahead of time whether you'll count off "rock, paper, scissors
+            , shoot" or just "rock, paper, scissors".
+          </li>
+          <br />
+          <li>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time.
+          </li>
+          <br />
+          <li>
+            If both players lay down the same hand, each player lays down
+            another hand.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="rockpaper.js"></script>
+  </body>
+</html>

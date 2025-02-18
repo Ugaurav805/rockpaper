@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 60px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(137, 193, 94, 1);
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: rgba(137, 193, 94, 1);
+  border: 2px solid white;
+  border-radius: 13px;
+  width: 800px;
+  height: 158px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.list {
+  list-style: none;
+  font: 40px "Roboto";
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+  line-height: 36.88px;
+  letter-spacing: 10%;
+}
+.score {
+  display: flex;
+  gap: 50px;
+}
+.YourScore,
+.computerScore {
+  background-color: rgba(255, 255, 255, 1);
+  width: 139px;
+  height: 128px;
+  border-radius: 9px;
+  padding: 5px;
+  text-align: center;
+  font: 15px "Roboto";
+}
+.p-count,
+.c-count {
+  font-size: 68px;
+  font-weight: 700;
+  text-align: center;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+#rulesButton {
+  position: absolute;
+  width: 122px;
+  height: 45px;
+  top: 623px;
+  left: 1265px;
+  border-radius: 13px;
+  border: 4px solid white;
+  background-color: rgba(137, 193, 94, 1);
+  font-weight: 600;
+  font-size: x-large;
+  color: white;
+}
+#nextButton {
+  display: none;
+  position: absolute;
+  width: 122px;
+  height: 45px;
+  top: 623px;
+  left: 1390px;
+  border-radius: 13px;
+  border: 4px solid white;
+  background-color: rgba(137, 193, 94, 1);
+  font-weight: 600;
+  font-size: x-large;
+  color: white;
+}
+.popup {
+  display: none;
+  position: absolute;
+  top: 222px;
+  left: 1166px;
+  width: 303px;
+  height: 367px;
+  background-color: #004429;
+  border: 9px solid white;
+  border-radius: 8px;
+  z-index: 1000;
+}
+.popup-content {
+  padding: 20px;
+  border-radius: 18px;
+}
+.close-button {
+  color: #f50101;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.insidebox {
+  margin: 1em 0;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17.23px;
+  list-style: none;
+  padding: 0;
+}
+.insidebox li {
+  position: relative;
+  padding-left: 20px;
+}
+.insidebox li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ffd600;
+  border-radius: 2px;
+}
+.Rule {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+.custom-button {
+  background-color: #f3f5f7;
+  color: white;
+  border: 5px;
+  height: 150px;
+  width: 150px;
+  border-radius: 500%;
+  padding: 30px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.custom-button:active {
+  transform: scale(0.95);
+}
+#rock {
+  border: 16px solid rgba(0, 116, 182, 1);
+}
+#scissor {
+  border: 16px solid rgba(189, 0, 255, 1);
+}
+#paper {
+  border: 16px solid rgba(255, 169, 67, 1);
+}
+.result {
+  width: 183px;
+  height: 36px;
+  top: 454px;
+  left: 563px;
+  font: "roboto";
+  font-weight: 800;
+  line-height: 45.7px;
+  font-size: 1.2rem;
+  animation: fadeIn 0.5s;
+  text-align: center;
+}
+.chosen-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.chosen-images img {
+  height: 100px;
+  width: 100px;
+}
+.reload,
+.new-game {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: green;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 1);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 17.58px;
+  width: 174px;
+  height: 44px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
